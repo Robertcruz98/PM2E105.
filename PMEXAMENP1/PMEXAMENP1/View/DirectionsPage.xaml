@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PMEXAMENP1.View.DirectionsPage"
+             BackgroundImage="grey.png">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Regresar a pagina principal"
+                     Clicked="toolbar01_Clicked"
+                     x:Name="toolbar01">
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        
+        <ScrollView>
+            
+
+            <ListView x:Name="lsdirecciones" ItemTapped="lsdirecciones_ItemTapped" >
+                <ListView.Header>
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Start">
+                        <Label TextColor="Black" Text="Longitud             Latitud                 Descripcion"/>
+                    </StackLayout>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                      
+                        <ViewCell>
+                            <Grid>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+
+                                <Label Text="{Binding latitud}" Grid.Row="1" Grid.Column="0" TextColor="DarkCyan" BackgroundColor="AliceBlue"/>
+                                <Label Text="{Binding longitud}" Grid.Row="1" Grid.Column="1" TextColor="Green" BackgroundColor="AliceBlue"/>
+                                <Label Text="{Binding shortdirection}" Grid.Row="1" Grid.Column="2" TextColor="Purple" BackgroundColor="AliceBlue"/>
+                                
+
+
+
+
+
+
+
+
+                               
+                            </Grid>
+                            
+                        </ViewCell>
+                        
+                    </DataTemplate>
+                    
+                </ListView.ItemTemplate>
+                
+                
+            </ListView>
+          
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

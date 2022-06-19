@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PMEXAMENP1.View.MapPage"
+             NavigationPage.HasNavigationBar="false"
+             BackgroundImage="grey.png">
+    <ContentPage.Content>
+        <ScrollView>
+
+            <StackLayout BackgroundColor="Transparent"   Margin="30,30,30,30">
+                <Frame BackgroundColor="Transparent" BorderColor="Purple" Padding="24" CornerRadius="10">
+                    <Label Text="Datos" HorizontalTextAlignment="Center" TextColor="Purple" FontSize="36"/>
+                </Frame>
+
+                <Grid>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="btnnewuuu" Text="Ubicaciones guardadas" FontSize="10" TextColor="Violet" CornerRadius="8" Clicked="btnnewuuu_Clicked" BackgroundColor="Transparent" BorderWidth="1" BorderColor="Violet"  Grid.Row="0" Grid.Column="0"></Button>
+                    <Button x:Name="btnmap" Text="Datos"  TextColor="Purple" CornerRadius="8"  BackgroundColor="Transparent" BorderWidth="1" BorderColor="Purple"  Grid.Row="0" Grid.Column="1"></Button>
+
+                    <Label Text="  " Grid.Row="1" Grid.Column="0" TextColor="Violet"/>
+                    
+                    <Label Text="Codigo" TextColor="Purple"  Grid.Row="1" Grid.Column="0"></Label>
+                    <Entry x:Name="txtcod"  TextColor="Purple"  Grid.Row="1" Grid.Column="1" Text="{Binding codigo}" IsReadOnly="True"></Entry>
+                    
+                    <Label Text="Latitud" TextColor="Purple"  Grid.Row="2" Grid.Column="0"></Label>
+                    <Entry x:Name="txtlat"  TextColor="Purple"  Grid.Row="2" Grid.Column="1" Text="{Binding latitud}" ></Entry>
+
+                    <Label Text="Longitud" TextColor="Purple"  Grid.Row="3" Grid.Column="0"></Label>
+                    <Entry x:Name="txtlon"  TextColor="Purple"  Grid.Row="3" Grid.Column="1" Text="{Binding longitud}"></Entry>
+
+                    <Label Text="Descripcion corta" TextColor="Purple"  Grid.Row="4" Grid.Column="0"></Label>
+                    <Entry x:Name="txtlong"  TextColor="Purple"  Grid.Row="4" Grid.Column="1" Text="{Binding longdirection}"></Entry>
+
+                    <Label Text="Descripcion Larga" TextColor="Purple"  Grid.Row="5" Grid.Column="0"></Label>
+                    <Entry x:Name="txtshort"  TextColor="Purple"  Grid.Row="5" Grid.Column="1" Text="{Binding shortdirection}"></Entry>
+
+
+                    <Label Text="  " Grid.Row="6" Grid.Column="0" TextColor="Violet"/>
+
+                    <Button x:Name="btndel" Text="Borrar Ubicacion" FontSize="12" TextColor="Crimson" CornerRadius="8" Clicked="btndel_Clicked" BackgroundColor="Transparent" BorderWidth="1" BorderColor="Crimson"  Grid.Row="7" Grid.Column="0"></Button>
+                    <Button x:Name="btnup" Text="Actualizar Ubicacion" FontSize="12" TextColor="OliveDrab" CornerRadius="8" Clicked="btnup_Clicked" BackgroundColor="Transparent" BorderWidth="1" BorderColor="OliveDrab"  Grid.Row="7" Grid.Column="1"></Button>
+                    
+
+
+
+
+
+                </Grid>
+
+                <Button x:Name="btnmapa" Text="Ir a Mapa" FontSize="12" TextColor="OliveDrab" CornerRadius="8" Clicked="btnmapa_Clicked" BackgroundColor="Transparent" BorderWidth="1" BorderColor="OliveDrab"  Grid.Row="8" Grid.Column="1"></Button>
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

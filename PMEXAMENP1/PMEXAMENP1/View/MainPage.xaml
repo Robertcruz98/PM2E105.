@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PMEXAMENP1.View.MainPage"
+             NavigationPage.HasNavigationBar="false"
+             BackgroundImage="grey.png">
+    <ContentPage.Content>
+        <ScrollView>
+
+            <StackLayout BackgroundColor="Transparent"   Margin="30,30,30,30">
+                <Frame BackgroundColor="Transparent" BorderColor="Purple" Padding="24" CornerRadius="10">
+                    <Label Text="Ubicaciones" HorizontalTextAlignment="Center" TextColor="Purple" FontSize="36"/>
+                </Frame>
+
+                <Grid>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+
+
+
+                    <Button x:Name="btnnewu" Text="Nueva ubicacion" TextColor="purple" CornerRadius="8" Clicked="btnnewu_Clicked" BackgroundColor="Transparent" BorderWidth="1" BorderColor="purple"  Grid.Row="0" Grid.Column="0"></Button>
+                    <Button x:Name="btnsavedu" Text="Ubicaciones Salvadas" FontSize="11" TextColor="violet" CornerRadius="8" Clicked="btnsavedu_Clicked" BackgroundColor="Transparent" BorderWidth="1" BorderColor="violet"  Grid.Row="0" Grid.Column="1"></Button>
+                    
+
+                </Grid>
+                <Button x:Name="btngetl" Text="Obtener Ubicacion" FontSize="11" TextColor="Purple" CornerRadius="8" Clicked="btngetl_Clicked" BackgroundColor="Transparent" BorderWidth="1" BorderColor="Purple"  Grid.Row="1" Grid.Column="1"></Button>
+
+                <Label Text="Latitud  actual" Padding="0,0,0,0" TextColor="Purple" ></Label>
+                <Entry x:Name="txtlatitud" TextColor="Purple" ></Entry>
+
+                <Label Text="Longitud actual" TextColor="Purple" ></Label>
+                <Entry x:Name="txtlongitud" TextColor="Purple" ></Entry>
+
+                <Label Text="Describa su ubicacion" TextColor="Purple" ></Label>
+                <Label Text=""></Label>
+                <Label Text=""></Label>
+                <Entry x:Name="txtlongdesc" Text="" TextColor="Purple"></Entry>
+
+                
+
+                <Label Text="Descripcion Corta" TextColor="Purple" ></Label>
+                <Entry x:Name="txtshortdec" Text="" TextColor="Purple" ></Entry>
+
+                <Label Text=""></Label>
+
+                <Button x:Name="btnsave" Text="Salvar Ubicacion" TextColor="purple" CornerRadius="8" Clicked="btnsave_Clicked" BackgroundColor="Transparent" BorderWidth="1" BorderColor="purple" ></Button>
+                <Button x:Name="btnsaved" Text="Ubicaciones Salvadas" TextColor="Purple" CornerRadius="8" Clicked="btnsaved_Clicked" BackgroundColor="Transparent" BorderWidth="1" BorderColor="Purple" ></Button>
+
+
+
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
